@@ -49,9 +49,11 @@ service apache2 start
 
 
 **Alla macchina 'vittima'** 
+
 ho inviato i file *hidden-tear.exe* e *hidden-tear-decripter.exe* contenuti nella cartella bin/Debug con i rispettivi nomi
 
 **Riferimento**
+
 [Riferimento video](https://www.youtube.com/watch?v=ILlTB0-xT-k&t=387s)
 
 **Legal Warning** 
