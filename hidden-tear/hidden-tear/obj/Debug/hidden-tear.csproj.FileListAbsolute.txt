@@ -7,3 +7,14 @@ c:\users\utku\documents\visual studio 2013\Projects\hidden-tear\hidden-tear\obj\
 c:\users\utku\documents\visual studio 2013\Projects\hidden-tear\hidden-tear\obj\Debug\hidden-tear.exe
 c:\users\utku\documents\visual studio 2013\Projects\hidden-tear\hidden-tear\obj\Debug\hidden-tear.pdb
 C:\Users\utku\Documents\Visual Studio 2013\Projects\hidden-tear\hidden-tear\obj\Debug\hidden-tear.csprojResolveAssemblyReference.cache
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\bin\Debug\hidden-tear.exe.config
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\bin\Debug\hidden-tear.exe
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\bin\Debug\hidden-tear.pdb
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden-tear.csproj.AssemblyReference.cache
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden-tear.csproj.SuggestedBindingRedirects.cache
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden_tear.Form1.resources
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden_tear.Properties.Resources.resources
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden-tear.csproj.GenerateResource.cache
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden-tear.csproj.CoreCompileInputs.cache
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden-tear.exe
+C:\Users\Repa235\Desktop\Git\hidden-tear\hidden-tear\hidden-tear\obj\Debug\hidden-tear.pdb

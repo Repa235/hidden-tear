@@ -57,6 +57,11 @@ namespace hidden_tear_decrypter
                     var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
                     AES.Key = key.GetBytes(AES.KeySize / 8);
                     AES.IV = key.GetBytes(AES.BlockSize / 8);
+                    
+                    //Proviamo con padding
+                    AES.Padding = PaddingMode.Zeros;
+
+                  
 
                     AES.Mode = CipherMode.CBC;
 
@@ -99,7 +104,7 @@ namespace hidden_tear_decrypter
             for (int i = 0; i < files.Length; i++)
             {
                 string extension = Path.GetExtension(files[i]);
-                if (extension == ".locked")
+                if (extension == ".bloccato")
                 {
                     DecryptFile(files[i], password);
                 }
@@ -120,6 +125,21 @@ namespace hidden_tear_decrypter
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
