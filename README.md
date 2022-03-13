@@ -54,7 +54,7 @@ service apache2 start
 
 * Inviare i file 
 	- *hidden-tear.exe* che si trova in [\hidden-tear\hidden-tear\bin\Debug] 
-	- e *hidden-tear-decripter.exe* che si trova in [hidden-tear\hidden-tear-decrypter\hidden-tear-decrypter\bin\Debug]
+	- e *hidden-tear-decripter.exe* che si trova in [\hidden-tear-decrypter\hidden-tear-decrypter\bin\Debug]
 
 **Riferimento**
 
