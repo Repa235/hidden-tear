@@ -52,7 +52,9 @@ service apache2 start
 
 **Alla macchina 'vittima'** 
 
-* Inviare i file *hidden-tear.exe* e *hidden-tear-decripter.exe* contenuti nella cartella bin/Debug con i rispettivi nomi
+* Inviare i file 
+	- *hidden-tear.exe* che si trova in [\hidden-tear\hidden-tear\bin\Debug] 
+	- e *hidden-tear-decripter.exe* che si trova in [hidden-tear\hidden-tear-decrypter\hidden-tear-decrypter\bin\Debug]
 
 **Riferimento**
 
